@@ -11,5 +11,5 @@ app.listen(port, () => {
 
 
 app.get('/', (req, res) => {
-    res.json({message: "Welcome to "})
+    res.json({message: "Welcome to posts"})
 })
