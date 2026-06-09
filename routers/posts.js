@@ -12,3 +12,5 @@ router.get('/:id', postController.show)
 
 // DELETE
 router.delete('/:id', postController.destroy)
+
+module.exports = router

@@ -18,3 +18,9 @@ const destroy = (req, res) => {
     const { id } = req.params
     res.json({message: `delete post with id ${id}`})
 }
+
+module.exports = {
+    index,
+    show,
+    destroy
+}
