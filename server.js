@@ -1,5 +1,4 @@
 const express = require('express')
-const { log } = require('node:console')
 const app = express()
 const port = 3000
 const postsRouter = require('./routers/posts')

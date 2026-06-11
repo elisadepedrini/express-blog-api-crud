@@ -1,22 +1,40 @@
-const posts = require('../immagini_e_post/posts')
+
+const posts = require('../data/posts')
 
 // INDEX
 const index = (req, res) => {
-    res.json({message: "index of posts"})
+    res.json(posts)
 }
 
 
 // SHOW
 const show = (req, res) => {
-    const { id } = req.params
-    res.json({message: `show of post with id ${id}`})
+
+    const postId = parseInt(req.params.id)
+    const thisPost = posts.find(post => post.id === postId)
+
+    if(!thisPost) {
+        return res.status(404).json({error: true, message: '404 Post not found' })
+    }
+    res.json(thisPost)
 }
 
 
 // DESTROY
 const destroy = (req, res) => {
-    const { id } = req.params
-    res.json({message: `delete post with id ${id}`})
+
+    const postId = parseInt(req.params.id)
+    const thisPost = posts.find(post => post.id === postId)
+
+    if (!thisPost) {
+    return res.status(404).json({ error: true, message: '404 Post not found' });
+  }
+
+    const index = posts.indexOf(thisPost)
+    posts.splice(index, 1)
+    console.log(posts)
+
+    res.sendStatus(204)
 }
 
 module.exports = {
