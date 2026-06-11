@@ -3,6 +3,15 @@ const posts = require('../data/posts')
 
 // INDEX
 const index = (req, res) => {
+    
+    const tag = req.query.tag
+    console.log(tag)
+
+    if(tag) {
+        const filteredPost = posts.filter(post => post.tags.map(singleTag => singleTag.toLowerCase()).includes(tag))
+        return res.json(filteredPost)
+    }
+
     res.json(posts)
 }
 
