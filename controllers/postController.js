@@ -46,8 +46,15 @@ const destroy = (req, res) => {
     res.sendStatus(204)
 }
 
+
+// STORE
+const store = (req, res) => {
+    console.log(req.body)
+}
+
 module.exports = {
     index,
     show,
-    destroy
+    destroy,
+    store
 }

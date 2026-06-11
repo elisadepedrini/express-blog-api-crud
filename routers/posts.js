@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-postController = require('../controllers/postController')
+const postController = require('../controllers/postController')
 
 // INDEX
 router.get('/', postController.index)
@@ -9,8 +9,11 @@ router.get('/', postController.index)
 // SHOW
 router.get('/:id', postController.show)
 
-// DELETE
+// DESTROY
 router.delete('/:id', postController.destroy)
+
+// STORE
+router.post('/', postController.store)
 
 
 
