@@ -9,12 +9,11 @@ router.get('/', postController.index)
 // SHOW
 router.get('/:id', postController.show)
 
-// DESTROY
-router.delete('/:id', postController.destroy)
-
 // STORE
 router.post('/', postController.store)
 
+// DESTROY
+router.delete('/:id', postController.destroy)
 
 
 module.exports = router

@@ -59,9 +59,9 @@ Nota: ricordiamo che non bisogna passare l’id quando si crea una nuova risorsa
 
 *Milestone 3*
 
-[] Implementiamo quindi la logica per aggiungere un nuovo post al nostro blog, e prepariamo la risposta adeguata.
+[x] Implementiamo quindi la logica per aggiungere un nuovo post al nostro blog, e prepariamo la risposta adeguata.
 
-Testiamolo con postman.
+[x] Testiamolo con postman.
 
 
 

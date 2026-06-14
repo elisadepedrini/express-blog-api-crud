@@ -1,4 +1,3 @@
-
 const posts = require('../data/posts')
 
 // INDEX
@@ -29,6 +28,25 @@ const show = (req, res) => {
 }
 
 
+// STORE
+const store = (req, res) => {
+    console.log(req.body)
+    
+    
+    const newId = posts[posts.length -1].id + 1;
+    
+    const newPost = {
+        id: newId,
+        ...req.body
+    }
+    
+    posts.push(newPost)
+    
+    res.status(201).json(newPost);
+    
+}
+
+
 // DESTROY
 const destroy = (req, res) => {
 
@@ -47,10 +65,7 @@ const destroy = (req, res) => {
 }
 
 
-// STORE
-const store = (req, res) => {
-    console.log(req.body)
-}
+
 
 module.exports = {
     index,
