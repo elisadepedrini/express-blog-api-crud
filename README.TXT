@@ -72,5 +72,14 @@ Nota: ricordiamo che non bisogna passare l’id quando si crea una nuova risorsa
 
 
 **Bonus**
-[] Quelli del giorno prima, se non già fatti
-[] In Update, controllare se il parametro si riferisce ad un post esistente, in caso contrario, rispondere con uno stato 404 e un messaggio d’errore, sempre in formato JSON.
+[x] Quelli del giorno prima, se non già fatti
+[x] In Update, controllare se il parametro si riferisce ad un post esistente, in caso contrario, rispondere con uno stato 404 e un messaggio d’errore, sempre in formato JSON.
+
+
+
+**Esercizio parte 3**
+
+Dopo aver completato tutte le operazioni CRUD, completiamo le nostre API inserendo un middleware per la gestione delle rotte non registrate e uno per la gestione degli errori.
+
+[x] Se viene chiamato un endpoint inesistente, un middleware dovrà rispondere un messaggio e uno status appropriato.
+[x] Se viene generato un errore, un middleware si occuperà di rispondere con un messaggio e uno status appropriato.

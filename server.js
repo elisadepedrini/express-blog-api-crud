@@ -3,6 +3,9 @@ const app = express()
 const port = 3000
 const postsRouter = require('./routers/posts')
 
+const notFound = require('./middlewares/notFound')
+const serverError = require('./middlewares/serverError')
+
 // Body parser
 app.use(express.json())
 
@@ -13,6 +16,10 @@ app.get('/', (req, res) => {
 
 
 app.use('/posts', postsRouter);
+
+
+app.use(notFound)
+app.use(serverError)
 
 
 app.listen(port, () => {
