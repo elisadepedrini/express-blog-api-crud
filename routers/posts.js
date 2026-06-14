@@ -12,6 +12,9 @@ router.get('/:id', postController.show)
 // STORE
 router.post('/', postController.store)
 
+// UPDATE
+router.put('/:id', postController.update)
+
 // DESTROY
 router.delete('/:id', postController.destroy)
 

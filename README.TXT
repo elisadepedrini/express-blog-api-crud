@@ -67,7 +67,7 @@ Nota: ricordiamo che non bisogna passare l’id quando si crea una nuova risorsa
 
 *Milestone 4*
 
-[] Ripetiamo il procedimento per la rotta di Update, in modo da avere la possibilità di modificare le nostre risorse. 
+[x] Ripetiamo il procedimento per la rotta di Update, in modo da avere la possibilità di modificare le nostre risorse. 
 
 
 

@@ -46,6 +46,26 @@ const store = (req, res) => {
     
 }
 
+// UPDATE
+const update = (req, res) => {
+    const putId = parseInt(req.params.id)
+    const thisPost = posts.find(post => post.id === putId)
+
+    if (!thisPost) {
+        return res.status(404).json({error: true, message: '404 Post not found'})
+    }
+
+    thisPost.title = req.body.title
+    thisPost.content = req.body.content
+    thisPost.image = req.body.image
+    thisPost.tags = req.body.tags
+
+
+    console.log(posts)
+
+    res.json(thisPost)
+}
+
 
 // DESTROY
 const destroy = (req, res) => {
@@ -71,5 +91,6 @@ module.exports = {
     index,
     show,
     destroy,
-    store
+    store,
+    update
 }
